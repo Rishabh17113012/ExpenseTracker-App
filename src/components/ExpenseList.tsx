@@ -39,6 +39,7 @@ export function ExpenseList({ expenses, onDelete }: ExpenseListProps) {
               variant="destructive"
               size="sm"
               onClick={() => handleDelete(expense.id)}
+              className="px-4 py-2 bg-blue-600 text-white rounded-md shadow-md transform hover:scale-105 transition-transform duration-200"
             >
               Delete
             </Button>
@@ -47,7 +48,7 @@ export function ExpenseList({ expenses, onDelete }: ExpenseListProps) {
             <div className="grid grid-cols-3 gap-4">
               <div>
                 <p className="text-sm font-medium">Amount</p>
-                <p className="text-2xl font-bold">${expense.amount}</p>
+                <p className="text-2xl font-bold">₹{expense.amount}</p>
               </div>
               <div>
                 <p className="text-sm font-medium">Category</p>

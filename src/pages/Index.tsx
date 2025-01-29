@@ -28,20 +28,30 @@ const Index = () => {
   };
 
   return (
-    <div className="container mx-auto py-8 px-4">
-      <h1 className="text-4xl font-bold mb-8 text-center">Expense Tracker</h1>
-      <div className="grid gap-8 md:grid-cols-2">
-        <div className="space-y-8">
+    <div className="container mx-auto lg:py-12 lg:px-12 bg-transparent">
+      <div className="flex items-center justify-between mb-8">
+        <h1 className="text-4xl font-extrabold text-center font-sans text-pretty text-blue-600 shadow-md rounded-md transform hover:scale-110 transition-transform duration-300">Expense Tracker</h1>
+        <img 
+          src="/logo.webp" 
+          alt="Expense Tracker Logo" 
+          width={120} 
+          height={80} 
+          className="rounded-md shadow-md transform hover:scale-110 transition-transform duration-300" 
+        />
+      </div>
+      <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2">
+        <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200">
           <ExpenseForm onSubmit={handleAddExpense} />
           <ExpenseChart expenses={expenses} />
         </div>
-        <div className="space-y-8">
+        <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200">
           <ExpenseSummary expenses={expenses} />
           <ExpenseList expenses={expenses} onDelete={handleDeleteExpense} />
         </div>
       </div>
     </div>
   );
+  
 };
 
 export default Index;

@@ -22,7 +22,7 @@ export function ExpenseSummary({ expenses }: ExpenseSummaryProps) {
           <CardTitle className="text-sm font-medium">Total Expenses</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="text-2xl font-bold">${totalExpenses.toFixed(2)}</div>
+          <div className="text-2xl font-bold">₹{totalExpenses.toFixed(2)}</div>
         </CardContent>
       </Card>
       <Card>
@@ -30,7 +30,7 @@ export function ExpenseSummary({ expenses }: ExpenseSummaryProps) {
           <CardTitle className="text-sm font-medium">Average Expense</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="text-2xl font-bold">${averageExpense.toFixed(2)}</div>
+          <div className="text-2xl font-bold">₹{averageExpense.toFixed(2)}</div>
         </CardContent>
       </Card>
     </div>

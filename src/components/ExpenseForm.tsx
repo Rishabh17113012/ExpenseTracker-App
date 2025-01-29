@@ -26,6 +26,8 @@ const categories = [
   "Entertainment",
   "Shopping",
   "Bills",
+  "Sports",
+  "Gym",
   "Other",
 ];
 
@@ -89,7 +91,7 @@ export function ExpenseForm({ onSubmit }: ExpenseFormProps) {
         <Label htmlFor="date">Date</Label>
         <Input id="date" name="date" type="date" required />
       </div>
-      <Button type="submit" className="w-full">
+      <Button type="submit" className="w-full px-4 py-2 bg-blue-600 text-white rounded-md shadow-md transform hover:scale-105 transition-transform duration-200">
         Add Expense
       </Button>
     </form>
